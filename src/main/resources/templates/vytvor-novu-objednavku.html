@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nová objednávka</title>
+</head>
+<body>
+<h1>Vytvor novú objednávku</h1>
+<form  method="POST" th:action="@{/uloz-zaznam}" th:object="${objednavkaObjektThymeleaf}">
+    Názov produktu <input  placeholder="Vypíš názov produktu"  th:field="*{nazovProduktu}" type="text"><br>
+    Farba <input  placeholder="Vypíš farbu"  th:field="*{farba}" type="text"><br>
+    Značka <input  placeholder="Vypíš značku"  th:field="*{znacka}" type="text"><br>
+    Veľkosť <input  placeholder="Vypíš veľkosť"  th:field="*{velkost}" type="text"><br>
+    Množstvo <input  placeholder="Množstvo" step="1" th:field="*{objednaneMnozstvo}" type="number"><br>
+    Dátum<input  placeholder="Vypíš dátum"  th:field="*{datum}" type="date"><br>
+    Meno zakaznika <input  placeholder="Vypíš Meno"  th:field="*{menoZakaznika}" type="text"><br>
+    Priezvisko zakaznika <input  placeholder="Vypíš priezvisko"  th:field="*{priezviskoZakaznika}" type="text"><br>
+    <button type="submit" class="btn btn-primary">Ulož záznam </button>
+</form>
+<br>
+<a href="/">Prejdi na hlavnú stránku</a>
+</body>
+</html>
